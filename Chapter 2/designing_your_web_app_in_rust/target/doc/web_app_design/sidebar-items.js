@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["generate_float","main"],"struct":["User"],"trait":["IsUser"]};

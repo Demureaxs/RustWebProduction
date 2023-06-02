@@ -1,0 +1,10 @@
+/Users/lauravania/Desktop/Rust Web Production Chapter 2 onwards/Chapter 2/designing_your_web_app_in_rust/target/debug/deps/os_str_bytes-8c18fc2b42701d3d.rmeta: /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.5.0/src/lib.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.5.0/src/common/mod.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.5.0/src/common/raw.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.5.0/src/iter.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.5.0/src/pattern.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.5.0/src/raw_str.rs
+
+/Users/lauravania/Desktop/Rust Web Production Chapter 2 onwards/Chapter 2/designing_your_web_app_in_rust/target/debug/deps/os_str_bytes-8c18fc2b42701d3d.d: /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.5.0/src/lib.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.5.0/src/common/mod.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.5.0/src/common/raw.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.5.0/src/iter.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.5.0/src/pattern.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.5.0/src/raw_str.rs
+
+/Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.5.0/src/lib.rs:
+/Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.5.0/src/common/mod.rs:
+/Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.5.0/src/common/raw.rs:
+/Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.5.0/src/iter.rs:
+/Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.5.0/src/pattern.rs:
+/Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.5.0/src/raw_str.rs:

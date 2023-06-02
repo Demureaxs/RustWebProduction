@@ -1,0 +1,1 @@
+window.ALL_CRATES = ["cfg_if","designing_your_web_app_in_rust","getrandom","libc","ppv_lite86","rand","rand_chacha","rand_core","web_app_design"];
