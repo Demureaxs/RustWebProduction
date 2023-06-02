@@ -1,0 +1,10 @@
+/Users/lauravania/Desktop/RustWebProduction/Section2-processing-data_and_handling-views/threads/target/debug/deps/async_lock-28202b2291ef72b2.rmeta: /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/async-lock-2.7.0/src/lib.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/async-lock-2.7.0/src/barrier.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/async-lock-2.7.0/src/mutex.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/async-lock-2.7.0/src/once_cell.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/async-lock-2.7.0/src/rwlock.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/async-lock-2.7.0/src/semaphore.rs
+
+/Users/lauravania/Desktop/RustWebProduction/Section2-processing-data_and_handling-views/threads/target/debug/deps/async_lock-28202b2291ef72b2.d: /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/async-lock-2.7.0/src/lib.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/async-lock-2.7.0/src/barrier.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/async-lock-2.7.0/src/mutex.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/async-lock-2.7.0/src/once_cell.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/async-lock-2.7.0/src/rwlock.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/async-lock-2.7.0/src/semaphore.rs
+
+/Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/async-lock-2.7.0/src/lib.rs:
+/Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/async-lock-2.7.0/src/barrier.rs:
+/Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/async-lock-2.7.0/src/mutex.rs:
+/Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/async-lock-2.7.0/src/once_cell.rs:
+/Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/async-lock-2.7.0/src/rwlock.rs:
+/Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/async-lock-2.7.0/src/semaphore.rs:

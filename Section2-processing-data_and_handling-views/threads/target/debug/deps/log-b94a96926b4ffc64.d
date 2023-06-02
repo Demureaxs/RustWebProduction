@@ -1,0 +1,12 @@
+/Users/lauravania/Desktop/RustWebProduction/Section2-processing-data_and_handling-views/threads/target/debug/deps/log-b94a96926b4ffc64.rmeta: /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.18/src/lib.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.18/src/macros.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.18/src/serde.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.18/src/kv/mod.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.18/src/kv/error.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.18/src/kv/key.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.18/src/kv/source.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.18/src/kv/value.rs
+
+/Users/lauravania/Desktop/RustWebProduction/Section2-processing-data_and_handling-views/threads/target/debug/deps/log-b94a96926b4ffc64.d: /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.18/src/lib.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.18/src/macros.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.18/src/serde.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.18/src/kv/mod.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.18/src/kv/error.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.18/src/kv/key.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.18/src/kv/source.rs /Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.18/src/kv/value.rs
+
+/Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.18/src/lib.rs:
+/Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.18/src/macros.rs:
+/Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.18/src/serde.rs:
+/Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.18/src/kv/mod.rs:
+/Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.18/src/kv/error.rs:
+/Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.18/src/kv/key.rs:
+/Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.18/src/kv/source.rs:
+/Users/lauravania/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.18/src/kv/value.rs:

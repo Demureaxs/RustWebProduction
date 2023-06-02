@@ -1,0 +1,1 @@
+Result<std::sync::Mutex<{integer}>, Box<(dyn std::any::Any + std::marker::Send + 'static)>>
