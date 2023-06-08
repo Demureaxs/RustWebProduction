@@ -1,22 +1,53 @@
-use actix_web::{web, App, HttpRequest, HttpServer, Responder};
-
-async fn greet(req: HttpRequest) -> impl Responder {
-    let name = req.match_info().get("name").unwrap_or("World");
-    format!("Hello {}!", name)
-}
+use actix_web::{App, HttpServer};
+mod processes;
+mod state;
+mod to_do;
+mod views;
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
-        println!("Http server factor is firing");
-        App::new()
-            .route("/", web::get().to(greet))
-            .route("/{name}", web::get().to(greet))
-            .route("/say/hello", web::get().to(|| async { "Hello again!" }))
+        println!("Http server factory is firing");
+        let app = App::new().configure(views::views_factory);
+        return app;
     })
     .bind("127.0.0.1:8080")?
-    // if this command is omitted it will fire a core for each of your cpus
-    .workers(3)
     .run()
     .await
 }
+
+// ------ standard actix -------
+// #[actix_web::main]
+// async fn main() -> std::io::Result<()> {
+//     HttpServer::new(|| {
+//         println!("Http server factor is firing");
+//         let app = App::new();
+//         return app;
+//     })
+//     .bind("127.0.0.1:8080")?
+//     // if this command is omitted it will fire a core for each of your cpus
+//     .workers(4)
+//     .run()
+//     .await
+// }
+
+// ---- use of futures ----
+
+// #[actix_web::main]
+// async fn main() -> std::io::Result<()> {
+//     let server_one = HttpServer::new(move || {
+//         App::new().service(web::scope("/utils").route("/one", web::get().to(utils_one)))
+//     })
+//     .bind("0.0.0.0:3006")?
+//     .run();
+
+//     let server_two = HttpServer::new(move || {
+//         App::new().service(web::resource("/health").route(web::get().to(health)))
+//     })
+//     .bind("0.0.0.0:8080")?
+//     .run();
+
+//     future::try_join(server_one, server_two).await?;
+
+//     Ok(())
+// }

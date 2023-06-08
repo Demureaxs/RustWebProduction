@@ -1,3 +1,6 @@
 {
-  "git.ignoreLimitWarning": true
+  "git.ignoreLimitWarning": true,
+  "rust-analyzer.linkedProjects": [
+    "./Section2-processing-data_and_handling-views/web-app-actix/Cargo.toml"
+  ]
 }

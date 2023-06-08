@@ -1048,6 +1048,7 @@ name = "web-app-actix"
 version = "0.1.0"
 dependencies = [
  "actix-web",
+ "serde_json",
 ]
 
 [[package]]
