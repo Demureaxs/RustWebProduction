@@ -1,6 +1,7 @@
-use serde::ser::{Serialize, SerializeStruct, Serializer};
 use core::fmt;
+use serde::ser::{Serialize, SerializeStruct, Serializer};
 
+#[derive(Clone)]
 pub enum TaskStatus {
     DONE,
     PENDING,
@@ -27,22 +28,20 @@ impl Serialize for TaskStatus {
     where
         S: Serializer,
     {
-        // Ok(serializer.serialize_str(&self.stringify().as_str())?)
-        let mut s = serializer.serialize_struct("TaskStatus", 1)?;
-        s.serialize_field("status", &self.stringify())?;
-        s.end()
+        // this ensures each entry is serialized correctly.
+        serializer.serialize_str(&self.stringify())
     }
 }
 
-// impl fmt::Display for TaskStatus {
-//     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-//         match self {
-//             TaskStatus::DONE => {
-//                 write!(f, "DONE")
-//             }
-//             TaskStatus::PENDING => {
-//                 write!(f, "PENDING")
-//             }
-//         }
-//     }
-// }
+impl fmt::Display for TaskStatus {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        match self {
+            TaskStatus::DONE => {
+                write!(f, "DONE")
+            }
+            TaskStatus::PENDING => {
+                write!(f, "PENDING")
+            }
+        }
+    }
+}
