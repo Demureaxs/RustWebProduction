@@ -1,7 +1,5 @@
 use super::super::enums::TaskStatus;
 use serde::Serialize;
-     
-
 
 #[derive(Serialize)]
 pub struct Base {

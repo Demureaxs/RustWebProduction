@@ -7,19 +7,22 @@ use serde_json::Map;
 use crate::json_serialization::to_do_items::ToDoItems;
 
 pub async fn get() -> impl Responder {
-    let state: Map<String, Value> = read_file("./state.json");
-
-    let mut array_buffer = Vec::new();
-
-    for (key, value) in state {
-        let status = TaskStatus::from_string(value.as_str().unwrap().to_string());
-
-        let item: ItemType = to_do_factory(&key, status);
-
-        array_buffer.push(item);
-    }
-
-    let return_package: ToDoItems = ToDoItems::new(array_buffer);
-    // HttpResponse::Ok().json(return_package)
-    return web::Json(return_package);
+    return ToDoItems::get_state();
 }
+// pub async fn get() -> impl Responder {
+//     let state: Map<String, Value> = read_file("./state.json");
+
+//     let mut array_buffer = Vec::new();
+
+//     for (key, value) in state {
+//         let status = TaskStatus::from_string(value.as_str().unwrap().to_string());
+
+//         let item: ItemType = to_do_factory(&key, status);
+
+//         array_buffer.push(item);
+//     }
+
+//     let return_package: ToDoItems = ToDoItems::new(array_buffer);
+//     // HttpResponse::Ok().json(return_package)
+//     return web::Json(return_package);
+// }
