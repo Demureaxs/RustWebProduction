@@ -1,18 +1,27 @@
+use std::vec;
+
 use actix_service::Service;
-use actix_web::{App, HttpServer};
+use actix_web::{middleware, App, HttpServer};
 mod json_serialization;
 mod jwt;
 mod processes;
 mod state;
 mod to_do;
 mod views;
-
+use actix_cors::Cors;
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
         println!("Http server factory is firing");
         let app = App::new()
+            .wrap(
+                Cors::default()
+                    .allow_any_origin()
+                    .allow_any_header()
+                    .allowed_methods(vec!["GET", "POST", "PUT", "DELETE"])
+                    .allowed_headers(vec!["content-type", "token"]),
+            )
             .wrap_fn(|req, srv| {
                 println!("Request: {:?}", req);
                 let future = srv.call(req);

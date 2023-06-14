@@ -1,4 +1,4 @@
-
+let html = String.raw;
 
 function renderItems(items, processType, elementId, processFunction) {
     let itemsMeta = [];
@@ -9,10 +9,9 @@ function renderItems(items, processType, elementId, processFunction) {
         let placeholderId = processType +
             "-" + title.replaceAll(" ", "-");
 
-        placeholder += "<div>" + title +
-            "<button " + 'id="' + placeholderId + '">'
-            + processType +
-            '</button>' + "</div>";
+            placeholder += '<div class="itemContainer">' + '<p>' + title + '</p>' +
+            '<div class="actionButton" ' +
+            'id="' + placeholderId + '">' + processType + '</div>' + "</div>";
         itemsMeta.push({"id": placeholderId, "title": title});
 
     }
@@ -46,16 +45,12 @@ function apiCall(url, method) {
 function editItem() {
     let title = this.id.replaceAll("-", " ")
         .replace("edit ", "");
-    
-    console.log(title)
     let call = apiCall("/v1/item/edit", "PUT");
 
     let json = {
         "title": title,
         "status": "DONE",
     };
-
-    console.log(json)
     call.send(JSON.stringify(json));
 }
 
