@@ -3,9 +3,9 @@ import { useState } from 'preact/hooks';
 
 function ToDoItem(props) {
     const [todo, setTodo] = useState({
-        title: this.props.title,
-        status: this.props.status,
-        button: processStatus(this.props.status),
+        title: props.title,
+        status: props.status,
+        button: processStatus(props.status),
     });
 
     function processStatus(status) {
