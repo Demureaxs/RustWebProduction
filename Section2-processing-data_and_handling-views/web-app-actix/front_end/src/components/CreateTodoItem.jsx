@@ -1,46 +1,51 @@
 import axios from 'axios';
-import { useState } from 'preact/hooks';
+import { Component } from 'react';
+import '../App.css';
 
-function CreateToDoItem() {
-    const [todo, setTodo] = useState({
+class CreateToDoItem extends Component {
+    state = {
         title: '',
-    });
+    };
 
-    function createItem() {
+    createItem = () => {
         axios
             .post(
-                'http://127.0.0.1:8080/v1/item/create' + todo.title,
+                'http://127.0.0.1:8080/v1/item/create/' + this.state.title,
                 {},
                 {
                     headers: { token: 'some_token' },
                 }
             )
             .then((response) => {
-                setTodo({ title: '' });
+                this.setState({ title: '' });
                 this.props.passBackResponse(response);
             });
-    }
+    };
 
-    function handleTitleChange() {
-        setTodo({ title: e.target.value });
-    }
+    handleTitleChange = (event) => {
+        this.setState({ title: event.target.value });
+    };
 
-    return (
-        <div className='inputContainer'>
-            <input
-                type='text'
-                id='name'
-                placeholder='Create to do item'
-                value={todo.title}
-                onChange={handleTitleChange}
-            />
-            <div
-                className='actionButton'
-                id='create-button'
-                onClick={createItem}
-            ></div>
-        </div>
-    );
+    render() {
+        return (
+            <div className='inputContainer'>
+                <input
+                    type='text'
+                    id='name'
+                    placeholder='Create To Do Item'
+                    value={this.state.title}
+                    onChange={this.handleTitleChange}
+                />
+                <div
+                    className='actionButton'
+                    id='create-button'
+                    onClick={this.createItem}
+                >
+                    Create
+                </div>
+            </div>
+        );
+    }
 }
 
 export default CreateToDoItem;

@@ -1,14 +1,18 @@
-use std::vec;
+extern crate diesel;
+extern crate dotenv;
 
+use actix_cors::Cors;
 use actix_service::Service;
 use actix_web::{middleware, App, HttpServer};
+
+mod config;
+mod database;
 mod json_serialization;
 mod jwt;
-mod processes;
-mod state;
+mod models;
+mod schema;
 mod to_do;
 mod views;
-use actix_cors::Cors;
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
@@ -19,8 +23,7 @@ async fn main() -> std::io::Result<()> {
                 Cors::default()
                     .allow_any_origin()
                     .allow_any_header()
-                    .allowed_methods(vec!["GET", "POST", "PUT", "DELETE"])
-                    .allowed_headers(vec!["content-type", "token"]),
+                    .allow_any_method(),
             )
             .wrap_fn(|req, srv| {
                 println!("Request: {:?}", req);

@@ -1,14 +1,15 @@
 import axios from 'axios';
-import { useState } from 'preact/hooks';
+import { Component } from 'react';
+import '../App.css';
 
-function ToDoItem(props) {
-    const [todo, setTodo] = useState({
-        title: props.title,
-        status: props.status,
-        button: processStatus(props.status),
-    });
+class ToDoItem extends Component {
+    state = {
+        title: this.props.title,
+        status: this.props.status,
+        button: this.processStatus(this.props.status),
+    };
 
-    function processStatus(status) {
+    processStatus(status) {
         if (status === 'PENDING') {
             return 'edit';
         } else {
@@ -16,7 +17,7 @@ function ToDoItem(props) {
         }
     }
 
-    function inverseStatus(status) {
+    inverseStatus(status) {
         if (status === 'PENDING') {
             return 'DONE';
         } else {
@@ -24,13 +25,13 @@ function ToDoItem(props) {
         }
     }
 
-    function sendRequest() {
+    sendRequest = () => {
         axios
             .post(
-                'http://127.0.0.1:8080/v1/item/' + todo.button,
+                'http://127.0.0.1:8080/v1/item/' + this.state.button,
                 {
-                    title: todo.title,
-                    status: inverseStatus(todo.status),
+                    title: this.state.title,
+                    status: this.inverseStatus(this.state.status),
                 },
                 {
                     headers: { token: 'some_token' },
@@ -39,14 +40,18 @@ function ToDoItem(props) {
             .then((response) => {
                 this.props.passBackResponse(response);
             });
-    }
+    };
 
-    return (
-        <div>
-            <p>{todo.title}</p>
-            <button onClick={sendRequest}>{todo.button}</button>
-        </div>
-    );
+    render() {
+        return (
+            <div className='itemContainer'>
+                <p>{this.state.title}</p>
+                <div className='actionButton' onClick={this.sendRequest}>
+                    {this.state.button}
+                </div>
+            </div>
+        );
+    }
 }
 
 export default ToDoItem;
